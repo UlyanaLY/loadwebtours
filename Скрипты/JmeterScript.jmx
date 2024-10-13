@@ -1875,14 +1875,14 @@ information.  Set the user up to make reservations...</stringProp>
                   <elementProp name="seatType" elementType="HTTPArgument">
                     <boolProp name="HTTPArgument.always_encode">false</boolProp>
                     <stringProp name="Argument.name">seatType</stringProp>
-                    <stringProp name="Argument.value">Coach</stringProp>
+                    <stringProp name="Argument.value">${seatType}</stringProp>
                     <stringProp name="Argument.metadata">=</stringProp>
                     <boolProp name="HTTPArgument.use_equals">true</boolProp>
                   </elementProp>
                   <elementProp name="seatPref" elementType="HTTPArgument">
                     <boolProp name="HTTPArgument.always_encode">false</boolProp>
                     <stringProp name="Argument.name">seatPref</stringProp>
-                    <stringProp name="Argument.value">None</stringProp>
+                    <stringProp name="Argument.value">${seatPref}</stringProp>
                     <stringProp name="Argument.metadata">=</stringProp>
                     <boolProp name="HTTPArgument.use_equals">true</boolProp>
                   </elementProp>
