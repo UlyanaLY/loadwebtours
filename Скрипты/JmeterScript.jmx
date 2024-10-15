@@ -809,7 +809,7 @@ information.  Set the user up to make reservations...</stringProp>
             </hashTree>
           </hashTree>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="UC02_Поиск_билета_без_оплаты">
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="UC02_Поиск_билета_без_оплаты" enabled="true">
           <stringProp name="TestPlan.comments">logic controller-&gt;simple controller</stringProp>
         </GenericController>
         <hashTree>
@@ -2197,7 +2197,7 @@ information.  Set the user up to make reservations...</stringProp>
             </hashTree>
           </hashTree>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="UC03_Покупка_билета" enabled="true">
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="UC03_Покупка_билета">
           <stringProp name="TestPlan.comments">logic controller-&gt;simple controller</stringProp>
         </GenericController>
         <hashTree>
@@ -2206,7 +2206,7 @@ information.  Set the user up to make reservations...</stringProp>
             <boolProp name="TransactionController.includeTimers">false</boolProp>
           </TransactionController>
           <hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="UC03_01_/WebTours/-1" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="UC03_01_/WebTours/-1">
               <stringProp name="HTTPSampler.domain">${host}</stringProp>
               <stringProp name="HTTPSampler.port">${port}</stringProp>
               <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
@@ -2278,7 +2278,7 @@ information.  Set the user up to make reservations...</stringProp>
               </HeaderManager>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="UC03_01_/cgi-bin/welcome.pl-2" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="UC03_01_/cgi-bin/welcome.pl-2">
               <stringProp name="HTTPSampler.domain">${host}</stringProp>
               <stringProp name="HTTPSampler.port">${port}</stringProp>
               <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
@@ -2451,7 +2451,7 @@ information.  Set the user up to make reservations...</stringProp>
               <hashTree/>
             </hashTree>
           </hashTree>
-          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="UC03_02_Логин" enabled="true">
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="UC03_02_Логин">
             <boolProp name="TransactionController.parent">true</boolProp>
             <boolProp name="TransactionController.includeTimers">false</boolProp>
           </TransactionController>
@@ -2771,7 +2771,7 @@ information.  Set the user up to make reservations...</stringProp>
             <boolProp name="TransactionController.includeTimers">false</boolProp>
           </TransactionController>
           <hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="UC03_03_/cgi-bin/welcome.pl-1" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="UC03_03_/cgi-bin/welcome.pl-1">
               <stringProp name="HTTPSampler.domain">${host}</stringProp>
               <stringProp name="HTTPSampler.port">${port}</stringProp>
               <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
@@ -2865,7 +2865,7 @@ information.  Set the user up to make reservations...</stringProp>
               </ResponseAssertion>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="UC03_03_/cgi-bin/nav.pl-2" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="UC03_03_/cgi-bin/nav.pl-2">
               <stringProp name="HTTPSampler.domain">${host}</stringProp>
               <stringProp name="HTTPSampler.port">${port}</stringProp>
               <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
@@ -2949,7 +2949,7 @@ information.  Set the user up to make reservations...</stringProp>
               </HeaderManager>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="UC03_03_/cgi-bin/reservations.pl-3" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="UC03_03_/cgi-bin/reservations.pl-3">
               <stringProp name="HTTPSampler.domain">${host}</stringProp>
               <stringProp name="HTTPSampler.port">${port}</stringProp>
               <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
@@ -3026,7 +3026,7 @@ information.  Set the user up to make reservations...</stringProp>
               <hashTree/>
             </hashTree>
           </hashTree>
-          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="UC03_04_Выбор_даты">
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="UC03_04_Выбор_даты" enabled="true">
             <boolProp name="TransactionController.parent">true</boolProp>
             <boolProp name="TransactionController.includeTimers">false</boolProp>
           </TransactionController>
@@ -3239,12 +3239,12 @@ information.  Set the user up to make reservations...</stringProp>
               <hashTree/>
             </hashTree>
           </hashTree>
-          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="UC03_05_Выбор_билета">
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="UC03_05_Выбор_билета" enabled="true">
             <boolProp name="TransactionController.parent">true</boolProp>
             <boolProp name="TransactionController.includeTimers">false</boolProp>
           </TransactionController>
           <hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="UC03_05_/cgi-bin/reservations.pl-1">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="UC03_05_/cgi-bin/reservations.pl-1" enabled="true">
               <stringProp name="TestPlan.comments">outboundFlight</stringProp>
               <stringProp name="HTTPSampler.domain">${host}</stringProp>
               <stringProp name="HTTPSampler.port">${port}</stringProp>
@@ -3395,7 +3395,7 @@ information.  Set the user up to make reservations...</stringProp>
             <boolProp name="TransactionController.includeTimers">false</boolProp>
           </TransactionController>
           <hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="UC03_06_/cgi-bin/reservations.pl-1" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="UC03_06_/cgi-bin/reservations.pl-1">
               <stringProp name="HTTPSampler.domain">${host}</stringProp>
               <stringProp name="HTTPSampler.port">${port}</stringProp>
               <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
@@ -5442,7 +5442,7 @@ information.  Set the user up to make reservations...</stringProp>
               </elementProp>
             </HTTPSamplerProxy>
             <hashTree>
-              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
                 <collectionProp name="HeaderManager.headers">
                   <elementProp name="Sec-Fetch-Mode" elementType="Header">
                     <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
@@ -5500,7 +5500,7 @@ information.  Set the user up to make reservations...</stringProp>
               </HeaderManager>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="UC05_03_/cgi-bin/nav.pl-2">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="UC05_03_/cgi-bin/nav.pl-2" enabled="true">
               <stringProp name="HTTPSampler.domain">${host}</stringProp>
               <stringProp name="HTTPSampler.port">${port}</stringProp>
               <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
@@ -5530,7 +5530,7 @@ information.  Set the user up to make reservations...</stringProp>
               </elementProp>
             </HTTPSamplerProxy>
             <hashTree>
-              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
                 <collectionProp name="HeaderManager.headers">
                   <elementProp name="Sec-Fetch-Mode" elementType="Header">
                     <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
@@ -5588,7 +5588,7 @@ information.  Set the user up to make reservations...</stringProp>
               </HeaderManager>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="UC05_03_/cgi-bin/itinerary.pl-3">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="UC05_03_/cgi-bin/itinerary.pl-3" enabled="true">
               <stringProp name="HTTPSampler.domain">${host}</stringProp>
               <stringProp name="HTTPSampler.port">${port}</stringProp>
               <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
@@ -5659,7 +5659,7 @@ information.  Set the user up to make reservations...</stringProp>
                 </collectionProp>
               </HeaderManager>
               <hashTree/>
-              <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="flightsID">
+              <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="flightsID" enabled="true">
                 <stringProp name="RegexExtractor.useHeaders">false</stringProp>
                 <stringProp name="RegexExtractor.refname">flightsID</stringProp>
                 <stringProp name="RegexExtractor.regex">name=&quot;flightID&quot; value=\&quot;(\d+-\d+-[A-z]+)\&quot;</stringProp>
@@ -5697,7 +5697,7 @@ information.  Set the user up to make reservations...</stringProp>
               </elementProp>
             </HTTPSamplerProxy>
             <hashTree>
-              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
                 <collectionProp name="HeaderManager.headers">
                   <elementProp name="Sec-Fetch-Mode" elementType="Header">
                     <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
@@ -5766,7 +5766,7 @@ information.  Set the user up to make reservations...</stringProp>
                 </collectionProp>
               </HeaderManager>
               <hashTree/>
-              <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor">
+              <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor" enabled="true">
                 <stringProp name="cacheKey">true</stringProp>
                 <stringProp name="filename"></stringProp>
                 <stringProp name="parameters"></stringProp>
@@ -5789,17 +5789,19 @@ vars.put(&quot;cgifields_list&quot;, cgifields);</stringProp>
               <hashTree/>
               <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion">
                 <collectionProp name="Asserion.test_strings">
-                  <stringProp name="205476630">&lt;title&gt;Flights List&lt;/title&gt;</stringProp>
+                  <stringProp name="205476600">&lt;title&gt;Flights List&lt;/title </stringProp>
+                  <stringProp name="0"></stringProp>
                 </collectionProp>
                 <stringProp name="Assertion.custom_message"></stringProp>
                 <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
                 <boolProp name="Assertion.assume_success">false</boolProp>
-                <intProp name="Assertion.test_type">16</intProp>
+                <intProp name="Assertion.test_type">34</intProp>
               </ResponseAssertion>
               <hashTree/>
               <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Dynamic Response Assertion">
                 <collectionProp name="Asserion.test_strings">
                   <stringProp name="-667972381">   &lt;b&gt;A total of ${afterExpected} scheduled flights.&lt;/font&gt;&lt;/b&gt;</stringProp>
+                  <stringProp name="-2087596664">&lt;center&gt;&lt;H3&gt;No flights have been reserved.&lt;/H3&gt;&lt;/center&gt;</stringProp>
                 </collectionProp>
                 <stringProp name="Assertion.custom_message"></stringProp>
                 <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
@@ -5830,7 +5832,7 @@ vars.put(&quot;afterExpected&quot;,  afterExpected)</stringProp>
               <hashTree/>
             </hashTree>
           </hashTree>
-          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="UC05_05_Выход">
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="UC05_05_Выход" enabled="true">
             <boolProp name="TransactionController.parent">true</boolProp>
             <boolProp name="TransactionController.includeTimers">false</boolProp>
           </TransactionController>
@@ -6013,7 +6015,7 @@ vars.put(&quot;afterExpected&quot;,  afterExpected)</stringProp>
         </hashTree>
         <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="UC06_Регистрация_нового_пользователя"/>
         <hashTree>
-          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="UC06_01_Домашняя_страница" enabled="true">
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="UC06_01_Домашняя_страница">
             <boolProp name="TransactionController.parent">true</boolProp>
             <boolProp name="TransactionController.includeTimers">false</boolProp>
           </TransactionController>
@@ -6251,7 +6253,7 @@ vars.put(&quot;afterExpected&quot;,  afterExpected)</stringProp>
                 <stringProp name="BoundaryExtractor.match_number">0</stringProp>
               </BoundaryExtractor>
               <hashTree/>
-              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion">
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
                 <collectionProp name="Asserion.test_strings">
                   <stringProp name="-1050141325">&lt;title&gt;Web Tours Navigation Bar&lt;/title&gt;</stringProp>
                 </collectionProp>
@@ -6263,12 +6265,12 @@ vars.put(&quot;afterExpected&quot;,  afterExpected)</stringProp>
               <hashTree/>
             </hashTree>
           </hashTree>
-          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="UC06_02_Регистрация" enabled="true">
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="UC06_02_Регистрация">
             <boolProp name="TransactionController.parent">true</boolProp>
             <boolProp name="TransactionController.includeTimers">false</boolProp>
           </TransactionController>
           <hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="UC06_02_/cgi-bin/login.pl-1" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="UC06_02_/cgi-bin/login.pl-1">
               <stringProp name="HTTPSampler.domain">${host}</stringProp>
               <stringProp name="HTTPSampler.port">${port}</stringProp>
               <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
@@ -6373,12 +6375,12 @@ vars.put(&quot;afterExpected&quot;,  afterExpected)</stringProp>
               <hashTree/>
             </hashTree>
           </hashTree>
-          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="UC06_03_Ввод_данных_пользователя" enabled="true">
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="UC06_03_Ввод_данных_пользователя">
             <boolProp name="TransactionController.parent">true</boolProp>
             <boolProp name="TransactionController.includeTimers">false</boolProp>
           </TransactionController>
           <hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="UC06_03_/cgi-bin/login.pl-1" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="UC06_03_/cgi-bin/login.pl-1">
               <stringProp name="HTTPSampler.domain">${host}</stringProp>
               <stringProp name="HTTPSampler.port">${port}</stringProp>
               <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
@@ -6414,28 +6416,28 @@ vars.put(&quot;afterExpected&quot;,  afterExpected)</stringProp>
                   <elementProp name="firstName" elementType="HTTPArgument">
                     <boolProp name="HTTPArgument.always_encode">false</boolProp>
                     <stringProp name="Argument.name">firstName</stringProp>
-                    <stringProp name="Argument.value">1</stringProp>
+                    <stringProp name="Argument.value">Ivan</stringProp>
                     <stringProp name="Argument.metadata">=</stringProp>
                     <boolProp name="HTTPArgument.use_equals">true</boolProp>
                   </elementProp>
                   <elementProp name="lastName" elementType="HTTPArgument">
                     <boolProp name="HTTPArgument.always_encode">false</boolProp>
                     <stringProp name="Argument.name">lastName</stringProp>
-                    <stringProp name="Argument.value">1</stringProp>
+                    <stringProp name="Argument.value">Ivanov</stringProp>
                     <stringProp name="Argument.metadata">=</stringProp>
                     <boolProp name="HTTPArgument.use_equals">true</boolProp>
                   </elementProp>
                   <elementProp name="address1" elementType="HTTPArgument">
                     <boolProp name="HTTPArgument.always_encode">false</boolProp>
                     <stringProp name="Argument.name">address1</stringProp>
-                    <stringProp name="Argument.value">1</stringProp>
+                    <stringProp name="Argument.value">Lenin&apos;s street</stringProp>
                     <stringProp name="Argument.metadata">=</stringProp>
                     <boolProp name="HTTPArgument.use_equals">true</boolProp>
                   </elementProp>
                   <elementProp name="address2" elementType="HTTPArgument">
                     <boolProp name="HTTPArgument.always_encode">false</boolProp>
                     <stringProp name="Argument.name">address2</stringProp>
-                    <stringProp name="Argument.value">1</stringProp>
+                    <stringProp name="Argument.value">Pushkin&apos;s street</stringProp>
                     <stringProp name="Argument.metadata">=</stringProp>
                     <boolProp name="HTTPArgument.use_equals">true</boolProp>
                   </elementProp>
@@ -6541,7 +6543,7 @@ vars.put(&quot;afterExpected&quot;,  afterExpected)</stringProp>
                 <stringProp name="TestPlan.comments">${__RandomNumber(0,10)}</stringProp>
               </UserParameters>
               <hashTree/>
-              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Dynamic Response Assertion">
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Dynamic Response Assertion" enabled="true">
                 <collectionProp name="Asserion.test_strings">
                   <stringProp name="-2003405091">&lt;blockquote&gt;Thank you, &lt;b&gt;${usernameR}&lt;/b&gt;, for registering and welcome to the Web Tours family.
 We hope we can meet all your current and future travel needs.  If you have any questions, feel free 
@@ -6730,7 +6732,7 @@ to ask our support staff.   Click below when you&apos;re ready to plan your drea
                 </collectionProp>
               </HeaderManager>
               <hashTree/>
-              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion">
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
                 <collectionProp name="Asserion.test_strings">
                   <stringProp name="-355774376">Using the menu to the left, you can search for new flights to book, 
 or review/edit the flights already booked.  Don&apos;t forget to sign off when
@@ -6749,7 +6751,7 @@ you&apos;re done!</stringProp>
             <boolProp name="TransactionController.includeTimers">false</boolProp>
           </TransactionController>
           <hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="UC06_05_/cgi-bin/welcome.pl-1">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="UC06_05_/cgi-bin/welcome.pl-1" enabled="true">
               <stringProp name="HTTPSampler.domain">${host}</stringProp>
               <stringProp name="HTTPSampler.port">${port}</stringProp>
               <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
@@ -6829,7 +6831,7 @@ you&apos;re done!</stringProp>
                 </collectionProp>
               </HeaderManager>
               <hashTree/>
-              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion">
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
                 <collectionProp name="Asserion.test_strings">
                   <stringProp name="-154489786">&lt;title&gt;Web Tours&lt;/title&gt;</stringProp>
                 </collectionProp>
@@ -6863,7 +6865,7 @@ you&apos;re done!</stringProp>
               </elementProp>
             </HTTPSamplerProxy>
             <hashTree>
-              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
                 <collectionProp name="HeaderManager.headers">
                   <elementProp name="Sec-Fetch-Mode" elementType="Header">
                     <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
@@ -6916,7 +6918,7 @@ you&apos;re done!</stringProp>
                 </collectionProp>
               </HeaderManager>
               <hashTree/>
-              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion">
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
                 <collectionProp name="Asserion.test_strings">
                   <stringProp name="-827036768">&lt;input type=&quot;image&quot; name=&quot;login&quot; value=&quot;Login&quot;</stringProp>
                 </collectionProp>
@@ -6953,7 +6955,7 @@ you&apos;re done!</stringProp>
             <stringProp name="764597751">Test Plan</stringProp>
             <stringProp name="-861945541">Test plan ДЗ 07</stringProp>
             <stringProp name="-1160948802">Scripts_WebTours</stringProp>
-            <stringProp name="1918787290">UC05_Удаление_существующего_бронирования</stringProp>
+            <stringProp name="-2092787093">UC06_Регистрация_нового_пользователя</stringProp>
           </collectionProp>
         </ModuleController>
         <hashTree/>
@@ -7367,7 +7369,7 @@ you&apos;re done!</stringProp>
           </HeaderManager>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="UC06_05_/cgi-bin/nav.pl-208">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="UC06_05_/cgi-bin/nav.pl-208" enabled="true">
           <stringProp name="HTTPSampler.domain">${host}</stringProp>
           <stringProp name="HTTPSampler.port">${port}</stringProp>
           <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
