@@ -4847,7 +4847,7 @@ information.  Set the user up to make reservations...</stringProp>
           </DebugPostProcessor>
           <hashTree/>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="UC05_Удаление_существующего_бронирования" enabled="true"/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="UC05_Удаление_существующего_бронирования"/>
         <hashTree>
           <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="UC05_01_Домашняя_страница" enabled="true">
             <boolProp name="TransactionController.parent">true</boolProp>
@@ -5414,7 +5414,7 @@ information.  Set the user up to make reservations...</stringProp>
               <hashTree/>
             </hashTree>
           </hashTree>
-          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="UC05_03_Список_билетов" enabled="true">
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="UC05_03_Список_билетов">
             <boolProp name="TransactionController.parent">true</boolProp>
             <boolProp name="TransactionController.includeTimers">false</boolProp>
           </TransactionController>
@@ -5500,7 +5500,7 @@ information.  Set the user up to make reservations...</stringProp>
               </HeaderManager>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="UC05_03_/cgi-bin/nav.pl-2" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="UC05_03_/cgi-bin/nav.pl-2">
               <stringProp name="HTTPSampler.domain">${host}</stringProp>
               <stringProp name="HTTPSampler.port">${port}</stringProp>
               <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
@@ -5588,7 +5588,7 @@ information.  Set the user up to make reservations...</stringProp>
               </HeaderManager>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="UC05_03_/cgi-bin/itinerary.pl-3" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="UC05_03_/cgi-bin/itinerary.pl-3">
               <stringProp name="HTTPSampler.domain">${host}</stringProp>
               <stringProp name="HTTPSampler.port">${port}</stringProp>
               <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
@@ -5602,7 +5602,7 @@ information.  Set the user up to make reservations...</stringProp>
               </elementProp>
             </HTTPSamplerProxy>
             <hashTree>
-              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
                 <collectionProp name="HeaderManager.headers">
                   <elementProp name="Sec-Fetch-Mode" elementType="Header">
                     <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
@@ -5697,7 +5697,7 @@ information.  Set the user up to make reservations...</stringProp>
               </elementProp>
             </HTTPSamplerProxy>
             <hashTree>
-              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
                 <collectionProp name="HeaderManager.headers">
                   <elementProp name="Sec-Fetch-Mode" elementType="Header">
                     <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
@@ -5766,7 +5766,7 @@ information.  Set the user up to make reservations...</stringProp>
                 </collectionProp>
               </HeaderManager>
               <hashTree/>
-              <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor" enabled="true">
+              <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor">
                 <stringProp name="cacheKey">true</stringProp>
                 <stringProp name="filename"></stringProp>
                 <stringProp name="parameters"></stringProp>
@@ -5819,18 +5819,33 @@ vars.put(&quot;cgifields_list&quot;, cgifields);</stringProp>
                 <stringProp name="RegexExtractor.match_number">-1</stringProp>
               </RegexExtractor>
               <hashTree/>
-              <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor">
-                <stringProp name="scriptLanguage">groovy</stringProp>
-                <stringProp name="parameters"></stringProp>
-                <stringProp name="filename"></stringProp>
-                <stringProp name="cacheKey">true</stringProp>
-                <stringProp name="script">def afterExpected = &quot;&quot;;
-
-afterExpected = vars.get(&quot;flightsIDAfter_matchNr&quot;).toString();
-vars.put(&quot;afterExpected&quot;,  afterExpected)</stringProp>
-              </JSR223PostProcessor>
-              <hashTree/>
             </hashTree>
+            <BeanShellAssertion guiclass="BeanShellAssertionGui" testclass="BeanShellAssertion" testname="BeanShell Assertion">
+              <stringProp name="BeanShellAssertion.query">String afterExpected = &quot;&quot;;
+String before = &quot;&quot;;
+
+before = vars.get(&quot;flightsID_matchNr&quot;); 
+afterExpected = vars.get(&quot;flightsIDAfter_matchNr&quot;);
+
+int beforeInt = Integer.parseInt(before);
+int afterExpectedInt = Integer.parseInt(afterExpected);
+
+if (beforeInt == afterExpectedInt + 1) {
+    Failure = false;
+} else if (beforeInt == 0) {
+    Failure = true; 
+    FailureMessage = &quot;There was a problem in preparing the data. The list of flights was empty.&quot;;
+} else if (beforeInt == afterExpectedInt) {
+	Failure = true; 
+     FailureMessage = &quot;The ticket wasn&apos;t deleted.&quot;;
+} else {
+    FailureMessage = &quot;There was an error in your code, please check the script.&quot;;
+}</stringProp>
+              <stringProp name="BeanShellAssertion.filename"></stringProp>
+              <stringProp name="BeanShellAssertion.parameters"></stringProp>
+              <boolProp name="BeanShellAssertion.resetInterpreter">true</boolProp>
+            </BeanShellAssertion>
+            <hashTree/>
           </hashTree>
           <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="UC05_05_Выход" enabled="true">
             <boolProp name="TransactionController.parent">true</boolProp>
@@ -6955,7 +6970,7 @@ you&apos;re done!</stringProp>
             <stringProp name="764597751">Test Plan</stringProp>
             <stringProp name="-861945541">Test plan ДЗ 07</stringProp>
             <stringProp name="-1160948802">Scripts_WebTours</stringProp>
-            <stringProp name="-2092787093">UC06_Регистрация_нового_пользователя</stringProp>
+            <stringProp name="1918787290">UC05_Удаление_существующего_бронирования</stringProp>
           </collectionProp>
         </ModuleController>
         <hashTree/>
